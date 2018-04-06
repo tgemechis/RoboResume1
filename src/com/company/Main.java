@@ -1,5 +1,6 @@
 package com.company;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -10,7 +11,7 @@ public class Main {
 
         ArrayList<ResumeToGo> resume = new ArrayList<>();
 
-
+        LocalDate today = LocalDate.now();
         ResumeToGo applicant;
 
 
@@ -65,8 +66,18 @@ public class Main {
             System.out.println("Enter start date");
             applicant.setStartDate(scan.nextLine());
 
+
+
             System.out.println("Enter end date");
             applicant.setEndDate(scan.nextLine());
+
+
+            if (applicant.getEndDate()!= null){
+
+                System.out.println(today);
+            } while(!done);
+
+
 
             System.out.println("Enter organization");
             applicant.setOrganization(scan.nextLine());
