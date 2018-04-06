@@ -1,7 +1,5 @@
 package com.company;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -10,13 +8,13 @@ public class Main {
     public static void main(String[] args) {
         // write your code here
 
-        ArrayList<RoboResume> resume = new ArrayList<>();
+        ArrayList<ResumeToGo> resume = new ArrayList<>();
 
 
-        RoboResume applicant;
+        ResumeToGo applicant;
 
 
-        boolean done = true;
+        boolean done = false;
 
 
         do {
@@ -24,25 +22,29 @@ public class Main {
             Scanner scan = new Scanner(System.in);
 
 
-            applicant = new RoboResume();
+            applicant = new ResumeToGo();
 
-            System.out.println("Enter your first name ");
+            //
+            System.out.println(" Enter your first name");
             applicant.setFirstName(scan.nextLine());
 
-            System.out.println("Enter your last name ");
+
+            System.out.println("Enter your last name");
             applicant.setLastName(scan.nextLine());
 
-            System.out.println("Enter  your phone number ");
-            applicant.setPhone(scan.nextInt());
+            System.out.println("Enter  your phone number");
+            applicant.setPhone(scan.nextLine());
 
             System.out.println("Enter your email");
             applicant.setEmail(scan.nextLine());
+
+            System.out.println("////////////////////////////////////");
 
             System.out.println("Enter your degree");
             applicant.setDegree(scan.nextLine());
 
             System.out.println("Enter year of graduation");
-            applicant.setYear(scan.nextInt());
+            applicant.setYear(scan.nextLine());
 
             System.out.println("Enter institution");
             applicant.setInstitution(scan.nextLine());
@@ -54,46 +56,52 @@ public class Main {
             System.out.println("Enter title");
             applicant.setTitle(scan.nextLine());
 
+            System.out.println("////////////////////////////////////");
 
             System.out.println("Enter experience");
             applicant.setExperience(scan.nextLine());
 
 
             System.out.println("Enter start date");
-            applicant.setStartDate(scan.nextInt());
+            applicant.setStartDate(scan.nextLine());
 
             System.out.println("Enter end date");
-            applicant.setEndDate(scan.nextInt());
+            applicant.setEndDate(scan.nextLine());
 
             System.out.println("Enter organization");
             applicant.setOrganization(scan.nextLine());
 
             System.out.println("Enter skill details");
             applicant.setSkillDetails(scan.nextLine());
+            System.out.println("////////////////////////////////////");
 
             resume.add(applicant);
 
-            System.out.println("Thank you for submitting your information");
+            System.out.println("Do you want to continue?");
+            String option = scan.nextLine();
 
 
+            if (option.equalsIgnoreCase("n") || option.equalsIgnoreCase("no")) {
+
+                done = true;
+
+
+            }
         }
-            while (!done) ;
+        while (!done);
 
-        for (RoboResume eachRoboResume: resume){
-            System.out.format("First Nme: " + eachRoboResume.getFirstName() +  "Last name: " + eachRoboResume.getLastName() +
-                    "Phone number: " + eachRoboResume.getPhone() +  "Email address: " + eachRoboResume.getEmail() +
-                    "Degree: " + eachRoboResume.getDegree() + "Year: " + eachRoboResume.getYear() + "Institution: " + eachRoboResume.getInstitution() +
-                    "Another degree: " + eachRoboResume.getAnotherDegree() +  "Title: " + eachRoboResume.getTitle() +  "Experience: " + eachRoboResume.getEmail() +
-                    "Start date: " + eachRoboResume.getStartDate() +  "End date: " + eachRoboResume.getEndDate() +  "Organization: " + eachRoboResume.getOrganization() +
-                    "Skill details: " + eachRoboResume.getSkillDetails()
+
+        for (ResumeToGo eachResume : resume) {
+            System.out.format("\nFirst Nme: \n" + "" + eachResume.getFirstName() + "" + "\nLast name: \n" + eachResume.getLastName() +
+                    "\nPhone number: \n" + eachResume.getPhone() + " \nEmail address:  \n" + eachResume.getEmail() +
+                    " \nDegree:  \n" + eachResume.getDegree() + " \nYear: \n " + eachResume.getYear() + " \nInstitution: \n " + eachResume.getInstitution() +
+                    " \nAnother degree: \n " + eachResume.getAnotherDegree() + " \nTitle:  \n" + eachResume.getTitle() + " \nExperience: \n " + eachResume.getEmail() +
+                    " \nStart date:  \n" + eachResume.getStartDate() + " \nEnd date: \n " + eachResume.getEndDate() + " \nOrganization:  \n" + eachResume.getOrganization() +
+                    " \nSkill details:  \n" + eachResume.getSkillDetails()
 
             );
-        }
-        }
-
-
     }
 
-
-
+}
+}
 

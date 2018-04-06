@@ -1,27 +1,27 @@
 package com.company;
 
-public class RoboResume {
+public class ResumeToGo {
     private String firstName;
     private String lastName;
-    private int phone;
+    private String phone;
     private String email;
     private String degree;
-    private int year;
+    private String year;
     private String institution;
     private String anotherDegree;
     private String title;
     private String experience;
-    private int startDate;
-    private int endDate;
+    private String startDate;
+    private String endDate;
     private String organization;
     private String skillDetails;
 
-    public RoboResume() {
+    public ResumeToGo() {
 
     }
 
-    public RoboResume(String firstName, String lastName, int phoneNumber, String email, String degree, int year, String institution,
-                      String anotherDegree, String title, String experience, int startDate, int endDate, String organization, String skillDetails)
+    public ResumeToGo(String firstName, String lastName, String phone, String email, String degree, String year, String institution,
+                      String anotherDegree, String title, String experience, String startDate, String endDate, String organization, String skillDetails)
 
     {
         this.firstName = firstName;
@@ -58,11 +58,11 @@ public class RoboResume {
         this.lastName = lastName;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
@@ -82,11 +82,11 @@ public class RoboResume {
         this.degree = degree;
     }
 
-    public int getYear() {
+    public String getYear() {
         return year;
     }
 
-    public void setYear(int year) {
+    public void setYear(String year) {
         this.year = year;
     }
 
@@ -122,19 +122,19 @@ public class RoboResume {
         this.experience = experience;
     }
 
-    public int getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(int startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
-    public int getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(int endDate) {
+    public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
 
